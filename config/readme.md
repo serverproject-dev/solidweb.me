@@ -1,7 +1,5 @@
 d2024-05-21
 - - - -
-# solidweb_me_config
-- - - -
 `/data/css/Recipes/mashlib/node_modules/@solid/community-server/config$ less config-mashlib.json`
 ```
 {
