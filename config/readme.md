@@ -97,7 +97,7 @@ d2024-10-13
 `/data/css/Recipes/mashlib/node_modules/@solid/community-server/config/identity/email$ less default.json`
 ```
 {
-  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^6.0.0/components/context.jsonld",
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld",
   "@graph": [
     {
       "comment": "This is an example of what an actual email sender configuration would look like.",
