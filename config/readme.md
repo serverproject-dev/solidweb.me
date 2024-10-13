@@ -1,15 +1,12 @@
-d2024-05-21
+d2024-10-13
 - - - -
 `/data/css/Recipes/mashlib/node_modules/@solid/community-server/config$ less config-mashlib.json`
 ```
-{
-  "@context": [
-    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^6.0.0/components/context.jsonld"
-  ],
+  {
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld",
   "import": [
     "css:config/app/init/default.json",
     "css:config/app/main/default.json",
-    "css:config/app/setup/disabled.json",
     "css:config/app/variables/default.json",
     "css:config/http/handler/default.json",
     "css:config/http/middleware/default.json",
@@ -19,9 +16,9 @@ d2024-05-21
     "css:config/identity/access/public.json",
     "css:config/identity/email/default.json",
     "css:config/identity/handler/default.json",
+    "css:config/identity/oidc/default.json",
     "css:config/identity/ownership/token.json",
     "css:config/identity/pod/static.json",
-    "css:config/identity/registration/enabled.json",
     "css:config/ldp/authentication/dpop-bearer.json",
     "css:config/ldp/authorization/webacl.json",
     "css:config/ldp/handler/default.json",
@@ -30,6 +27,7 @@ d2024-05-21
     "css:config/ldp/modes/default.json",
     "css:config/storage/backend/file.json",
     "css:config/storage/key-value/resource-store.json",
+    "css:config/storage/location/pod.json",
     "css:config/storage/middleware/default.json",
     "css:config/util/auxiliary/acl.json",
     "css:config/util/identifiers/suffix.json",
@@ -38,6 +36,7 @@ d2024-05-21
     "css:config/util/resource-locker/file.json",
     "css:config/util/variables/default.json"
   ],
+
   "@graph": [
     {
       "comment": [
@@ -65,16 +64,19 @@ d2024-05-21
       "@type": "StaticAssetHandler",
       "assets": [
         {
-          "StaticAssetHandler:_assets_key": "/mash.css",
-          "StaticAssetHandler:_assets_value": "./mashlib/dist/mash.css"
+          "@type": "StaticAssetEntry",
+          "relativeUrl": "/mash.css",
+          "filePath": "./mashlib/dist/mash.css"
         },
         {
-          "StaticAssetHandler:_assets_key": "/mashlib.min.js",
-          "StaticAssetHandler:_assets_value": "./mashlib/dist/mashlib.min.js"
+          "@type": "StaticAssetEntry",
+          "relativeUrl": "/mashlib.min.js",
+          "filePath": "./mashlib/dist/mashlib.min.js"
         },
         {
-          "StaticAssetHandler:_assets_key": "/mashlib.min.js.map",
-          "StaticAssetHandler:_assets_value": "./mashlib/dist/mashlib.min.js.map"
+          "@type": "StaticAssetEntry",
+          "relativeUrl": "/mashlib.min.js.map",
+          "filePath": "./mashlib/dist/mashlib.min.js.map"
         }
       ]
     },
@@ -89,6 +91,8 @@ d2024-05-21
     }
   ]
 }
+
+
 ```
 `/data/css/Recipes/mashlib/node_modules/@solid/community-server/config/identity/email$ less default.json`
 ```
