@@ -133,8 +133,8 @@ server {
   server_name solidweb.me;
   listen 443 ssl http2;
   listen [::]:443 ssl http2;
-  ssl_certificate         /etc/letsencrypt/archive/solidweb.me/fullchain13.pem;
-  ssl_certificate_key     /etc/letsencrypt/archive/solidweb.me/privkey13.pem;
+  ssl_certificate         /etc/letsencrypt/archive/solidweb.me/fullchain15.pem;
+  ssl_certificate_key     /etc/letsencrypt/archive/solidweb.me/privkey15.pem;
   ssl_trusted_certificate /etc/letsencrypt/live/solidweb.me/lets-encrypt-x3-cross-signed.pem;
 
 rewrite ^/$  somewhereelse/index.html  permanent;
