@@ -13,7 +13,10 @@
 
 <> a foaf:PersonalProfileDocument ;  # this document is a PersonalProfileDocument
     foaf:maker <#me> ;               # I am the maker of the document
-    foaf:primaryTopic <#me>.         # the document is about me
+    foaf:primaryTopic <#me>;         # the document is about me
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+    dcterms:created "2025-01-13T00:00:00Z"^^xsd:dateTime;
+    dcterms:modified "2025-01-13T00:00:01Z"^^xsd:dateTime.
 
 <#me> a foaf:Person;                 # I am a Person
     foaf:homepage <https://meisdata.io/>;
@@ -32,9 +35,6 @@
     webidp:outbox <https://solidweb.me/testpro-dev/outbox/>;
     solid:preferencesFile <https://solidweb.me/testpro-dev/Settings/Preferences.ttl>;
     foaf:knows <https://bob.solidcommunity.net/profile/card#me>;
-    dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
-    dcterms:created "2025-01-13T00:00:00Z"^^xsd:dateTime;
-    dcterms:modified "2025-01-13T00:00:01Z"^^xsd:dateTime;
     foaf:name "Matthias Evering";
     foaf:givenName "Matthias";
     foaf:familyName "Evering";
