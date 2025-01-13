@@ -11,9 +11,11 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 
-<#me> a foaf:PersonalProfileDocument, foaf:Person;
-    foaf:maker <#me>;
-    foaf:primaryTopic <#me>;
+<> a foaf:PersonalProfileDocument ;  # this document is a PersonalProfileDocument
+    foaf:maker <#me> ;               # I am the maker of the document
+    foaf:primaryTopic <#me>.         # the document is about me
+
+<#me> a foaf:Person;                 # I am a Person
     foaf:homepage <https://meisdata.io/>;
     foaf:img <https://solidweb.me/testpro-dev/public/image.jpg>;
     foaf:mbox <mailto:info@meisdata.io>;
