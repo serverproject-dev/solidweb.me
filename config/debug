@@ -78,28 +78,6 @@
       ]
     },
     {
-      "comment": "Serve Mashlib static files.",
-      "@id": "urn:solid-server:default:StaticAssetHandler",
-      "@type": "StaticAssetHandler",
-      "assets": [
-        {
-          "@type": "StaticAssetEntry",
-          "relativeUrl": "/mash.css",
-          "filePath": "./mashlib/dist/mash.css"
-        },
-        {
-          "@type": "StaticAssetEntry",
-          "relativeUrl": "/mashlib.min.js",
-          "filePath": "./mashlib/dist/mashlib.min.js"
-        },
-        {
-          "@type": "StaticAssetEntry",
-          "relativeUrl": "/mashlib.min.js.map",
-          "filePath": "./mashlib/dist/mashlib.min.js.map"
-        }
-      ]
-    },
-    {
       "@id": "urn:solid-server:default:QuotaStrategy",
       "PodQuotaStrategy:_limit_amount": 50000000,
       "PodQuotaStrategy:_limit_unit": "bytes"
@@ -110,3 +88,4 @@
     }
   ]
 }
+
