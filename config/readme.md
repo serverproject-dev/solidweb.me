@@ -1,8 +1,8 @@
-d2024-10-13
+d2026-07-25
 - - - -
-`/data/css/Recipes/mashlib/node_modules/@solid/community-server/config$ less config-mashlib.json`
+`~/.nvm/versions/node/v22.14.0/lib/node_modules/@solid/community-server/config$ less config-mashlib.json`
 ```
-  {
+ {
   "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld",
   "import": [
     "css:config/app/init/default.json",
@@ -31,12 +31,12 @@ d2024-10-13
     "css:config/storage/middleware/default.json",
     "css:config/util/auxiliary/acl.json",
     "css:config/util/identifiers/suffix.json",
+
     "css:config/util/logging/winston.json",
     "css:config/util/representation-conversion/default.json",
     "css:config/util/resource-locker/file.json",
     "css:config/util/variables/default.json"
   ],
-
   "@graph": [
     {
       "comment": [
@@ -44,6 +44,7 @@ d2024-10-13
         "Derived from config/file-no-setup.json"
       ]
     },
+
     {
       "comment": "Serve Databrowser as default representation",
       "@id": "urn:solid-server:default:DefaultUiConverter",
@@ -59,24 +60,24 @@ d2024-10-13
       ]
     },
     {
-      "comment": "Serve Mashlib static files.",
+      "comment": "Remove the Markdown to HTML converter from the default chained converter",
+      "@type": "Override",
+      "overrideInstance": { "@id": "urn:solid-server:default:ChainedConverter" },
+      "overrideSteps": [{
+        "@type": "OverrideListRemove",
+        "overrideParameter": { "@id": "ChainedConverter:_converters" },
+        "overrideTarget": { "@id": "urn:solid-server:default:MarkdownToHtmlConverter" }
+      }]
+    },
+    {
+      "comment": "Serve Mashlib static files from /dist/ folder.",
       "@id": "urn:solid-server:default:StaticAssetHandler",
       "@type": "StaticAssetHandler",
       "assets": [
         {
           "@type": "StaticAssetEntry",
-          "relativeUrl": "/mash.css",
-          "filePath": "./mashlib/dist/mash.css"
-        },
-        {
-          "@type": "StaticAssetEntry",
-          "relativeUrl": "/mashlib.min.js",
-          "filePath": "./mashlib/dist/mashlib.min.js"
-        },
-        {
-          "@type": "StaticAssetEntry",
-          "relativeUrl": "/mashlib.min.js.map",
-          "filePath": "./mashlib/dist/mashlib.min.js.map"
+          "relativeUrl": "/",
+          "filePath": "./mashlib/dist/"
         }
       ]
     },
@@ -91,7 +92,6 @@ d2024-10-13
     }
   ]
 }
-
 
 ```
 `/data/css/Recipes/mashlib/node_modules/@solid/community-server/config/identity/email$ less default.json`
