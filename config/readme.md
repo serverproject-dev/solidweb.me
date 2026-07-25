@@ -103,10 +103,10 @@ d2026-07-25
       "comment": "This is an example of what an actual email sender configuration would look like.",
       "@id": "urn:solid-server:default:EmailSender",
       "@type": "BaseEmailSender",
-      "args_senderName": "me@evering.eu",
-      "args_emailConfig_host": "smtp.sendgrid.net",
+      "args_senderName": "info@meisdata.io",
+      "args_emailConfig_host": "smtp-pulse.com",
       "args_emailConfig_port": 465,
-      "args_emailConfig_auth_user": "apikey",
+      "args_emailConfig_auth_user": "meisdata@gmail.com",
       "args_emailConfig_auth_pass": "black"
     }
   ]
