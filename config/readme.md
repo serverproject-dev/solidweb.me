@@ -94,7 +94,7 @@ d2026-07-25
 }
 
 ```
-`/data/css/Recipes/mashlib/node_modules/@solid/community-server/config/identity/email$ less default.json`
+`~/.nvm/versions/node/v22.14.0/lib/node_modules/@solid/community-server/config/identity/email$ less default.json`
 ```
 {
   "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld",
